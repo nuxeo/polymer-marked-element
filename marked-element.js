@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 import '@polymer/polymer/polymer-legacy.js';
 import './marked-import.js';
+import DOMPurify from 'dompurify';
 
 import {Polymer} from '@polymer/polymer/lib/legacy/polymer-fn.js';
 import {dom} from '@polymer/polymer/lib/legacy/polymer.dom.js';
@@ -307,14 +308,18 @@ Polymer({
       renderer: renderer,
       highlight: this._highlight.bind(this),
       breaks: this.breaks,
-      sanitize: this.sanitize,
-      sanitizer: this.sanitizer,
       pedantic: this.pedantic,
       smartypants: this.smartypants
     };
 
     dom(this._outputElement).innerHTML =
         marked(this.markdown, opts, this.callback);
+
+    let html = marked.parse(this.markdown, opts);
+    if (this.sanitize) {
+      html = DOMPurify.sanitize(html);
+    }
+    dom(this._outputElement).innerHTML = html;
     this.fire('marked-render-complete', {}, {composed: true});
   },
 

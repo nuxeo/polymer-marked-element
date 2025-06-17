@@ -15,12 +15,12 @@
   "name": "@polymer/marked-element",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "webmat": "^0.2.0",
+    "@polymer/gen-typescript-declarations": "^1.5.1",
     "@polymer/paper-styles": "^3.0.0-pre.26",
     "@polymer/test-fixture": "^4.0.1",
-    "wct-browser-legacy": "^1.0.1",
     "@webcomponents/webcomponentsjs": "^2.0.0",
-    "@polymer/gen-typescript-declarations": "^1.5.1"
+    "wct-browser-legacy": "^1.0.1",
+    "webmat": "^0.2.0"
   },
   "scripts": {
     "format": "webmat",
@@ -31,7 +31,8 @@
   "main": "marked-element.js",
   "author": "The Polymer Project Authors (https://polymer.github.io/AUTHORS.txt)",
   "dependencies": {
-    "marked": "~0.3.9",
-    "@polymer/polymer": "^3.0.0"
+    "@polymer/polymer": "^3.0.0",
+    "dompurify": "^3.2.6",
+    "marked": "^4.0.10"
   }
 }
