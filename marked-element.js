@@ -9,7 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 import '@polymer/polymer/polymer-legacy.js';
 import './marked-import.js';
-import DOMPurify from 'dompurify';
+const DOMPurify = require('dompurify');
 
 import {Polymer} from '@polymer/polymer/lib/legacy/polymer-fn.js';
 import {dom} from '@polymer/polymer/lib/legacy/polymer.dom.js';
