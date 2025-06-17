@@ -15,7 +15,7 @@
   "publishConfig": {
     "registry": "https://packages.nuxeo.com/repository/npm-public"
   },
-  "name": "@polymer/marked-element",
+  "name": "@nuxeo/marked-element",
   "license": "BSD-3-Clause",
   "devDependencies": {
     "webmat": "^0.2.0",
