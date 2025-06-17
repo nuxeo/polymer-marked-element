@@ -15,24 +15,23 @@
   "name": "@polymer/marked-element",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "@polymer/gen-typescript-declarations": "^1.5.1",
+    "webmat": "^0.2.0",
     "@polymer/paper-styles": "^3.0.0-pre.26",
     "@polymer/test-fixture": "^4.0.1",
-    "@webcomponents/webcomponentsjs": "^2.0.0",
     "wct-browser-legacy": "^1.0.1",
-    "webmat": "^0.2.0"
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "@polymer/gen-typescript-declarations": "^1.5.1"
   },
   "scripts": {
     "format": "webmat",
     "generate-types": "gen-typescript-declarations --deleteExisting --outDir . --verify",
     "prepare": "npm run generate-types"
   },
-  "version": "3.0.1-nx.0",
+  "version": "3.0.1",
   "main": "marked-element.js",
   "author": "The Polymer Project Authors (https://polymer.github.io/AUTHORS.txt)",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0",
-    "dompurify": "^3.2.6",
-    "marked": "^4.0.10"
+    "marked": "^4.0.10",
+    "@polymer/polymer": "^3.0.0"
   }
 }
